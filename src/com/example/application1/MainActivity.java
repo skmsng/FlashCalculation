@@ -60,11 +60,6 @@ public class MainActivity extends Activity {
 			break;
     	}
     	
-    	
-//    	TextView tv = (TextView) this.findViewById(R.id.display2);
-//    	tv.setText(Integer.toString(random));
-    	
-    	//view = (TextView) this.findViewById(R.id.display2);
     	view.setText(Integer.toString(random));
     	
     	System.out.println("計算結果:" + total);
@@ -126,7 +121,6 @@ public class MainActivity extends Activity {
 			break;
     	}
     	
-    	//view = (TextView)this.findViewById(R.id.display2);
     	count = 0;
 
     	handler = new SampleHandler();
@@ -134,8 +128,6 @@ public class MainActivity extends Activity {
     }
 
     
-    
-
 	/**
 	 * @see android.app.Activity#onResume()
 	 */
@@ -190,7 +182,6 @@ public class MainActivity extends Activity {
 					break;
 		    	}
 				view.setText(Integer.toString(random));
-//				total += random;
 				flag = false;
 				
 			}else{
@@ -216,38 +207,3 @@ public class MainActivity extends Activity {
 //System.out.print(e);
 //}
     
-    
-    /**
-     * addキーが押された時
-     * add、sub、mul、div
-     /
-    public void addKeyOnClick(View v){
-    	Button button = (Button)v;
-    	String s = button.getText().toString();
-    	Log.d("押されたボタン",s);
-    	
-    	TextView tv = (TextView) this.findViewById(R.id.display1);
-    	s = s.substring(1);
-    	num1 += Integer.parseInt(s);
-    	tv.setText(Integer.toString(num1));
-    	
-    }
-    
-    /**
-     * subキーが押された時
-     * add、sub、mul、div
-     /
-    public void subKeyOnClick(View v){
-    	Button button = (Button)v;
-    	String s = button.getText().toString();
-    	Log.d("押されたボタン",s);
-    	
-    	TextView tv = (TextView) this.findViewById(R.id.display1);
-    	s = s.substring(1);
-    	num1 -= Integer.parseInt(s);
-    	tv.setText(Integer.toString(num1));
-    	
-    }
-    */
-    
-
