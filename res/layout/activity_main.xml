@@ -1,0 +1,232 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<TableLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+ 
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+<!-- 
+			<TextView
+		        android:id="@+id/display1"
+		        android:text="0"
+		        android:textSize="48sp"
+		        android:textColor="#000000"
+		        android:background="#00ffff"
+		        android:gravity="right"
+		        
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        
+		        tools:context=".MainActivity" />
+ -->	    
+		    <TextView
+		        android:id="@+id/display2"
+		        android:text="0"
+		        android:textSize="80sp"
+		        android:textColor="#000000"
+		        android:background="#ffffff"
+		        android:gravity="center"
+		        android:layout_margin="10dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+	
+		        tools:context=".MainActivity" />
+		</TableRow>
+
+		<TableRow
+		    android:id="@+id/tableRow2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent" >
+
+	    </TableRow>
+
+    </TableLayout>
+
+	<TableLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+
+
+		<TextView
+	            android:text="難易度（範囲）"
+	            android:layout_marginLeft="10dp"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+		
+	    <TableRow
+	        android:id="@+id/tableRow2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" >
+			
+			<RadioGroup 
+	            android:id="@+id/radiogroup"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	             >
+	            <RadioButton
+	                android:id="@+id/radiobutton1"
+	                android:text="低（1~9）"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"  
+	                android:layout_weight="1"
+	                android:checked="true" />
+	            <RadioButton
+	                android:id="@+id/radiobutton2"
+	                android:text="中（10~19）"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1" />
+	            <RadioButton
+	                android:id="@+id/radiobutton3"
+	                android:text="高（20~99）"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1" />
+	            
+	        </RadioGroup>
+	        
+	        
+<!--        
+	        <Spinner
+	            android:id="@+id/spinner1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+
+
+
+	        <Button
+	            android:id="@+id/button3"
+	            android:text="リセット"
+				android:onClick="resetKeyOnClick"
+	            android:layout_width="80dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	        
+	        <Button
+	            android:id="@+id/button2"
+	            android:text="答え"
+				android:onClick="endKeyOnClick"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+ -->
+
+	        
+
+	    </TableRow>
+
+	    <TableRow
+	        android:id="@+id/tableRow4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" >
+
+	        <Button
+	            android:id="@+id/autobutton1"
+	            android:text="速い"
+				android:onClick="autoKeyOnClick"
+	            android:layout_width="150dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	        <Button
+	            android:id="@+id/autobutton2"
+	            android:text="普通"
+				android:onClick="autoKeyOnClick"
+	            android:layout_width="150dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	        <Button
+	            android:id="@+id/autobutton3"
+	            android:text="遅い"
+				android:onClick="autoKeyOnClick"
+	            android:layout_width="150dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	    </TableRow>
+	    
+		<TableRow
+	        android:id="@+id/tableRow3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" >
+	        <Button
+	            android:id="@+id/button1"
+	            android:text="手動"
+				android:onClick="startKeyOnClick"
+	            android:layout_width="150dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	        <Button
+	            android:id="@+id/button2"
+	            android:text="答え"
+				android:onClick="endKeyOnClick"
+	            android:layout_width="150dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	    </TableRow>
+	    
+<!--
+	    <TableRow
+	        android:id="@+id/tableRow5"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" >
+	        
+	        <Button
+	            android:id="@+id/button11"
+	            android:text="11"
+				android:onClick="addKeyOnClick"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	    </TableRow>
+-->
+<!-- 
+	    <TableRow
+	        android:id="@+id/tableRow6"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1" >
+	        
+	        <Button
+	            android:id="@+id/button5000"
+	            android:text="+5000"
+				android:onClick="addKeyOnClick"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	        <Button
+	            android:id="@+id/button1000"
+	            android:text="+1000"
+				android:onClick="addKeyOnClick"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	        <Button
+	            android:id="@+id/button1001"
+	            android:text="-1000"
+				android:onClick="subKeyOnClick"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	        <Button
+	            android:id="@+id/button5001"
+	            android:text="-5000"
+				android:onClick="subKeyOnClick"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" />
+	    </TableRow>
+-->
+	</TableLayout>
+
+</LinearLayout>
