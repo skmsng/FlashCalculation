@@ -13,9 +13,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
-	int total;	//計算結果
-	int random;	//表示する乱数
-	int count;	//表示回数
+	int total;		//計算結果
+	int random;		//表示する乱数
+	int count;		//表示回数
 	int delaytime;	//表示間隔
 	TextView view = null;
 	SampleHandler handler = null;
@@ -192,7 +192,7 @@ public class MainActivity extends Activity {
 		}
 	
 		public void sleep(long delay){
-			this.removeMessages(0);								//既にあるMessageを削除
+			this.removeMessages(0);									//既にあるMessageを削除
 			this.sendMessageDelayed(this.obtainMessage(0), delay);	//delayの時間後にMessageを発行する	
 		}
 
@@ -207,3 +207,4 @@ public class MainActivity extends Activity {
 //System.out.print(e);
 //}
     
+// test
