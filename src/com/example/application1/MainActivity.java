@@ -12,18 +12,18 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 /**
- * ‰æ–Ê‚Ì’èŠúXV‚ğ‚·‚é‚É‚ÍAƒXƒŒƒbƒh‚Ìrunƒƒ\ƒbƒh“à‚Å‰º‹L‚Ì‚Ç‚¿‚ç‚©‚Ìƒƒ\ƒbƒh‚ğg‚¤
- * ‚PDHandlerƒNƒ‰ƒX‚Ìpostƒƒ\ƒbƒh
- * ‚QDHandlerƒNƒ‰ƒX‚ÌsendEmptyMessageƒƒ\ƒbƒhi•Ê“rhandleMessageƒƒ\ƒbƒh‚ğ’è‹`‚·‚éj
+ * ç”»é¢ã®å®šæœŸæ›´æ–°ã‚’ã™ã‚‹ã«ã¯ã€ã‚¹ãƒ¬ãƒƒãƒ‰ã®runãƒ¡ã‚½ãƒƒãƒ‰å†…ã§ä¸‹è¨˜ã®ã©ã¡ã‚‰ã‹ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ã†
+ * ï¼‘ï¼Handlerã‚¯ãƒ©ã‚¹ã®postãƒ¡ã‚½ãƒƒãƒ‰
+ * ï¼’ï¼Handlerã‚¯ãƒ©ã‚¹ã®sendEmptyMessageãƒ¡ã‚½ãƒƒãƒ‰ï¼ˆåˆ¥é€”handleMessageãƒ¡ã‚½ãƒƒãƒ‰ã‚’å®šç¾©ã™ã‚‹ï¼‰
  */
 
 public class MainActivity extends Activity {
 	
-	int total;		//ŒvZŒ‹‰Ê
-	int random;		//—”
-	int count = 10;	//•\¦‰ñ”
-	long delaytime;	//•\¦ŠÔŠu(ƒ~ƒŠ•b)
-	boolean flag;	//‰æ–Ê•\¦A”ñ•\¦
+	int total;		//è¨ˆç®—çµæœ
+	int random;		//ä¹±æ•°
+	int count = 10;	//è¡¨ç¤ºå›æ•°
+	long delaytime;	//è¡¨ç¤ºé–“éš”(ãƒŸãƒªç§’)
+	boolean flag;	//ç”»é¢è¡¨ç¤ºã€éè¡¨ç¤º
 	
 	TextView tv;
 	Handler handler;
@@ -46,11 +46,11 @@ public class MainActivity extends Activity {
     
     /**
      * auto
-     * ©“®
+     * è‡ªå‹•
      */
     public void autoKeyOnClick(View v){		
     	
-    	//•\¦ŠÔŠu
+    	//è¡¨ç¤ºé–“éš”
     	Button button = (Button)v;
     	switch(button.getId()){								
 		case R.id.autobutton1:
@@ -76,8 +76,8 @@ public class MainActivity extends Activity {
     }
     
     /**
-     * ƒXƒŒƒbƒh
-     * ƒCƒ“ƒi[ƒNƒ‰ƒX
+     * ã‚¹ãƒ¬ãƒƒãƒ‰
+     * ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
      */
     public class LoopThread extends Thread {
     	public void run(){
@@ -92,7 +92,7 @@ public class MainActivity extends Activity {
     			}
 
         		/**
-        		 * postƒƒ\ƒbƒh
+        		 * postãƒ¡ã‚½ãƒƒãƒ‰
         		 */
         		handler.post(new Runnable(){
         			public void run(){
@@ -102,17 +102,17 @@ public class MainActivity extends Activity {
             		    	RadioButton radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
             		    	switch(radioButton.getId()){								
             				case R.id.radiobutton1:
-            					System.out.println("’á");
+            					System.out.println("ä½");
             					random = (int)Math.floor(Math.random() * 9) + 1;
             			    	total += random;
             					break;
             				case R.id.radiobutton2:
-            					System.out.println("’†");
+            					System.out.println("ä¸­");
             					random = (int)Math.floor(Math.random() * 10) + 10;
             			    	total += random;
             					break;
             				case R.id.radiobutton3:
-            					System.out.println("‚");
+            					System.out.println("é«˜");
             					random = (int)Math.floor(Math.random() * 8 + 2) * 10 + (int)Math.floor(Math.random() * 10);
             			    	total += random;
             					break;
@@ -134,24 +134,24 @@ public class MainActivity extends Activity {
 
     /**
      * start
-     * è“®
+     * æ‰‹å‹•
      */
     public void startKeyOnClick(View v){
     	RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
     	RadioButton radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
     	switch(radioButton.getId()){								
 		case R.id.radiobutton1:
-			System.out.println("’á");
+			System.out.println("ä½");
 			random = (int)Math.floor(Math.random() * 9) + 1;
 	    	total += random;
 			break;
 		case R.id.radiobutton2:
-			System.out.println("’†");
+			System.out.println("ä¸­");
 			random = (int)Math.floor(Math.random() * 10) + 10;
 	    	total += random;
 			break;
 		case R.id.radiobutton3:
-			System.out.println("‚");
+			System.out.println("é«˜");
 			random = (int)Math.floor(Math.random() * 8 + 2) * 10 + (int)Math.floor(Math.random() * 10);
 	    	total += random;
 			break;
@@ -159,25 +159,25 @@ public class MainActivity extends Activity {
     	
     	tv.setText(Integer.toString(random));
     	
-    	System.out.println("ŒvZŒ‹‰Ê:" + total);
+    	System.out.println("è¨ˆç®—çµæœ:" + total);
     }
     
     /**
      * end
-     * “š‚¦AƒŠƒZƒbƒg
+     * ç­”ãˆã€ãƒªã‚»ãƒƒãƒˆ
      */
     public void endKeyOnClick(View v){
 
     	tv.setText(Integer.toString(total));
     	
-    	System.out.println("ŒvZŒ‹‰Ê:" + total);
+    	System.out.println("è¨ˆç®—çµæœ:" + total);
     	total = 0;
     	
     	Button button = (Button)v;
-    	if(button.getText().toString().equals("“š‚¦")){
-    		button.setText("ƒŠƒZƒbƒg");
+    	if(button.getText().toString().equals("ç­”ãˆ")){
+    		button.setText("ãƒªã‚»ãƒƒãƒˆ");
     	}else{
-    		button.setText("“š‚¦");
+    		button.setText("ç­”ãˆ");
     	}
     }
     
@@ -186,9 +186,9 @@ public class MainActivity extends Activity {
     
     /**
      * auto
-     * ©“®
-     * 2012.8.5”­•\‚Ég‚Á‚Ä‚¢‚½‰æ–ÊXV•û–@
-     * ã‹L2‚Ì•û–@‚¾‚¯‚ÇƒXƒŒƒbƒh‚ğg‚Á‚Ä‚¢‚È‚¢
+     * è‡ªå‹•
+     * 2012.8.5ç™ºè¡¨æ™‚ã«ä½¿ã£ã¦ã„ãŸç”»é¢æ›´æ–°æ–¹æ³•
+     * ä¸Šè¨˜2ã®æ–¹æ³•ã ã‘ã©ã‚¹ãƒ¬ãƒƒãƒ‰ã‚’ä½¿ã£ã¦ã„ãªã„
      *
     public void autoKeyOnClick(View v){
     	Button button = (Button)v;
@@ -232,7 +232,7 @@ public class MainActivity extends Activity {
 	}
 
     /**
-     * sleepƒƒ\ƒbƒh‚ğŒÄ‚Ô‚±‚Æ‚ÅhandleMessageƒƒ\ƒbƒh‚ª©“®XV‚³‚ê‚é
+     * sleepãƒ¡ã‚½ãƒƒãƒ‰ã‚’å‘¼ã¶ã“ã¨ã§handleMessageãƒ¡ã‚½ãƒƒãƒ‰ãŒè‡ªå‹•æ›´æ–°ã•ã‚Œã‚‹
      * 
 	public class SampleHandler extends Handler {
 		boolean flag = true;
@@ -253,17 +253,17 @@ public class MainActivity extends Activity {
 		    	RadioButton radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
 		    	switch(radioButton.getId()){								
 				case R.id.radiobutton1:
-					System.out.println("’á");
+					System.out.println("ä½");
 					random = (int)Math.floor(Math.random() * 9) + 1;
 			    	total += random;
 					break;
 				case R.id.radiobutton2:
-					System.out.println("’†");
+					System.out.println("ä¸­");
 					random = (int)Math.floor(Math.random() * 10) + 10;
 			    	total += random;
 					break;
 				case R.id.radiobutton3:
-					System.out.println("‚");
+					System.out.println("é«˜");
 					random = (int)Math.floor(Math.random() * 8 + 2) * 10 + (int)Math.floor(Math.random() * 10);
 			    	total += random;
 					break;
@@ -279,8 +279,8 @@ public class MainActivity extends Activity {
 		}
 	
 		public void sleep(long delay){
-			this.removeMessages(0);									//Šù‚É‚ ‚éMessage‚ğíœ
-			this.sendMessageDelayed(this.obtainMessage(0), delay);	//delay‚ÌŠÔŒã‚ÉMessage‚ğ”­s‚·‚é	
+			this.removeMessages(0);									//æ—¢ã«ã‚ã‚‹Messageã‚’å‰Šé™¤
+			this.sendMessageDelayed(this.obtainMessage(0), delay);	//delayã®æ™‚é–“å¾Œã«Messageã‚’ç™ºè¡Œã™ã‚‹	
 		}
 
 	}
